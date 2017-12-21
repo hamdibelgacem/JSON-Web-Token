@@ -1,0 +1,18 @@
+{
+  "name": "json-web-token",
+  "version": "1.0.0",
+  "description": "a simple This app uses JSON Web Tokens and the jsonwebtoken package to implement token based authentication on a simple Node.js API.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Belgacem Hamdi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.13.7",
+    "morgan": "^1.9.0"
+  }
+}

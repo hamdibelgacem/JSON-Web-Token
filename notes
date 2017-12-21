@@ -1,0 +1,50 @@
+*Introduction:
+    Token based authentication is prominent everywhere on the web nowadays.
+    With most every web company using an API, tokens are the best way to handle 
+    authentication for multiple users.
+
+**There are some very important factors when choosing token based authentication for your application.
+    The main reasons for tokens are:
+        -Stateless and scalable servers
+        -Mobile application ready
+        -Pass authentication to other applications
+        -Extra security 
+
+    Any major API or web application that you've come across has most likely used tokens. 
+    Applications like Facebook, Twitter, Google+, GitHub, and so many more use tokens.
+
+***The Problems with Server Based Authentication:
+
+    Sessions: 
+        Every time a user is authenticated, the server will need to create a record somewhere on our server. 
+        This is usually done in memory and when there are many users authenticating, 
+        the overhead on your server increases.
+
+    Scalability: 
+        Since sessions are stored in memory, this provides problems with scalability. 
+        As our cloud providers start replicating servers to handle application load, 
+        having vital information in session memory will limit our ability to scale.
+
+    CORS: 
+        As we want to expand our application to let our data be used across multiple mobile devices, 
+        we have to worry about cross-origin resource sharing (CORS). When using AJAX calls to grab 
+        resources from another domain (mobile to our API server), 
+        we could run into problems with forbidden requests.
+
+    CSRF: 
+        We will also have protection against cross-site request forgery (CSRF). 
+        Users are susceptible to CSRF attacks since they can already be authenticated 
+        with say a banking site and this could be taken advantage of when visiting other sites.
+
+****How Token Based Works:
+    Token based authentication is stateless. We are not storing any information about our user on the server 
+    or in a session.
+
+----------------------Notes about the code --------------------
+
+
+    express: is the popular Node framework
+    mongoose: is how we interact with our MongoDB database
+    morgan: will log requests to the console so we can see what is happening
+    body-parser: will let us get parameters from our POST requests
+    jsonwebtoken: is how we create and verify our JSON Web Tokens
